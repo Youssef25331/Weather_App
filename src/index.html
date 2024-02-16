@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,300&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/6595a7a002.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="overlay" style="display:none">
+    <div class="error-box">
+    </div>
+  </div>
+  <div class="input-container">
+    <div class="input-box-wrapper">
+      <div class="input-box">
+        <input autocomplete="off" value="Alexandria" type="text" id="input-box" placeholder="Input city name">
+        <button type="submit" id="submit-button"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="list-container">
+      </div>
+    </div>
+    <div class="weather-data">
+      <h1>Weather in <span id='current-location'></span></h1>
+      <h1 id="current-temp"></h1>
+      <div class="condition">
+        <img id="condition-image" src="https://openweathermap.org/img/wn/10d@4x.png" alt="Weather Condition">
+        <h2 id="condition-text"></h2>
+      </div>
+      <h3 id='humidity'>Humidity:</h3>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
