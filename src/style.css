@@ -62,11 +62,16 @@ button {
   cursor: pointer;
 }
 .error-box {
-  background: black;
+  background: #151515;
+  text-align:center;
   border-radius: 10px;
-  width: 50vh;
+  width: 40vh;
   height: 25vh;
+  padding:16px;
   position: fixed;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
   top: calc(50% - 12.5vh);
   left: calc(50% - 25vh);
 }
