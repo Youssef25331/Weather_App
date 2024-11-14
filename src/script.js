@@ -150,15 +150,19 @@ function selectListItem(item) {
 function updateWeatherInfo(data) {
   let locText = document.querySelector("#current-location");
   let tempText = document.querySelector("#current-temp");
+  let feels = document.querySelector("#feels-like");
   let humidity = document.querySelector("#humidity");
+  let windSpeed = document.querySelector("#wind-speed");
   let conditionText = document.querySelector("#condition-text");
   let conditionImage = document.querySelector('#condition-image');
 
   locText.textContent = data.name;
   tempText.textContent = `${data.main.temp} °C`;
-  conditionText.textContent = data.weather[0].main;
+  conditionText.textContent = data.weather[0].description;
   conditionImage.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+  feels.textContent = `Feels like: ${data.main.feels_like} °C`;
   humidity.textContent = `Humidity: ${data.main.humidity}%`;
+  windSpeed.textContent = `Wind: ${data.wind.speed} Km/h`;
 }
 
 function errorHandle() {
