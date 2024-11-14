@@ -17,12 +17,16 @@ overlay.addEventListener("click", errorHandle);
 
 iBox.addEventListener("keyup", handleInput);
 iBox.addEventListener("keydown", handleKeyDown);
-
+iBox.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    tempApi();
+  }
+});
 async function tempApi() {
   clearList();
   let apiTemp;
   let locationName = iBox.value.trim();
-  
+
   if (lon && lat) {
     apiTemp = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=dc612cf83bb00944b4d4c08dbe31c731&units=metric`;
   } else if (locationName) {
@@ -30,7 +34,7 @@ async function tempApi() {
   } else {
     return; // No location provided
   }
-  
+
   try {
     const response = await fetch(apiTemp);
     const data = await response.json();
@@ -43,11 +47,11 @@ async function tempApi() {
 
 async function locApi() {
   let locationName = iBox.value.trim();
-  
+
   if (!locationName) return;
-  
+
   let apiLoc = `http://api.openweathermap.org/geo/1.0/direct?q=${locationName}&limit=5&appid=dc612cf83bb00944b4d4c08dbe31c731&units=metric`;
-  
+
   try {
     const response = await fetch(apiLoc);
     const data = await response.json();
@@ -68,7 +72,6 @@ function handleInput() {
     }
   }
 }
-
 
 function handleKeyDown(e) {
   let buttons = document.querySelectorAll(".input-list-button");
@@ -101,12 +104,11 @@ function highlightListItem(key) {
   highlight = true;
 }
 
-
 function createList(data) {
   clearList();
   lon = null;
   lat = null;
-  
+
   let list = document.createElement("ul");
   let locations = data;
   locations.forEach((location) => {
@@ -154,7 +156,7 @@ function updateWeatherInfo(data) {
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
   let conditionText = document.querySelector("#condition-text");
-  let conditionImage = document.querySelector('#condition-image');
+  let conditionImage = document.querySelector("#condition-image");
 
   locText.textContent = data.name;
   tempText.textContent = `${data.main.temp} °C`;
