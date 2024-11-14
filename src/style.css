@@ -3,8 +3,12 @@
   padding: 0;
 }
 body {
-  background-size: 100%;
-  background-image: url(https://images.pexels.com/photos/378570/pexels-photo-378570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1506606401543-2e73709cebb4?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmV3JTIweW9yayUyMG5pZ2h0fGVufDB8fDB8fHww);
+  background-size: cover;
 }
 
 input {
@@ -67,17 +71,17 @@ button {
   left: calc(50% - 25vh);
 }
 .input-container {
-  width: 25vw;
   padding: 10px;
   position: absolute;
-  left: calc(50% - 12.5vw);
-  top: calc(25%);
   background-color: rgba(0, 0, 0, 0.9);
   padding: 24px;
   border-radius: 20px;
   display: flex;
   flex-flow: column;
   justify-content: center;
+  @media (min-width: 500px) {
+    width: 400px;
+  }
 }
 .input-box {
   padding: 10px;
@@ -92,11 +96,14 @@ button {
   overflow: visible;
 }
 .input-list-button {
-  width: 22.5vw;
+  width: 280px;
   text-align: left;
+  @media (min-width: 500px) {
+    width: 360px;
+  }
 }
 .input-list-button:hover,
-.button-hover{
+.button-hover {
   background-color: #262626;
 }
 .list-container ul {
