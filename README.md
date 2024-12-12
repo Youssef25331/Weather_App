@@ -8,7 +8,6 @@ In the src directory, you can run:
 
 ### `Live-server`
 
-Runs the app in the development mode.\
 Open [http://localhost](http://localhost:8080) to view it in your browser.
 
 # Resource
@@ -18,3 +17,7 @@ API: [OpenWeather](https://openweathermap.org/api)
 Images: [Unsplash](https://unsplash.com)
 
 # Preview
+![Main](https://github.com/user-attachments/assets/5a5beac1-8ea0-4907-8cb1-534d2f5c1c50)
+![New York](https://github.com/user-attachments/assets/e9633ef0-dcf9-4b2a-b62c-3feec7e45d17)
+![Jazan](https://github.com/user-attachments/assets/e01e1708-6cbe-4abf-b38a-dd382d984dbd)
+![Mobile](https://github.com/user-attachments/assets/749874d0-5392-4bbe-a3a9-11782aedcb7e)
