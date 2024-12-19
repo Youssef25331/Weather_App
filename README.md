@@ -11,8 +11,11 @@ In the src directory, you can run:
 Open [http://localhost](http://localhost:8080) to view it in your browser.
 
 # Resource
+Website: [Weather App](https://weather-app-delta-two-69.vercel.app)
 
 API: [OpenWeather](https://openweathermap.org/api)
+
+Hosting:[Vercel](https://vercel.com)
 
 Images: [Unsplash](https://unsplash.com)
 
